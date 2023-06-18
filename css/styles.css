@@ -1,0 +1,193 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 30px 30px 100px;
+	font-size: 1.5em;
+}
+h1{
+	font-family: Algerian,serif;
+	font-weight: 100;
+	text-shadow: 5px 5px 5px indianred, 10px 10px 3px steelblue;
+}
+div.box{
+	background-color: darkred;
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin-right: 10px;
+}
+div.contain{
+	border: 3px solid yellow;
+	width: 1200px;
+	height: 300px;
+	margin: 20px 0 0 20px;
+	display: flow-root; /*allows for elements that are floating to stay inside the div*/
+}
+div.overflow{
+	height: 70px;
+	width: 300px;
+	border: 3px solid green;
+	overflow: scroll;
+	margin: 20px auto 20px;
+}
+div.overflow p{
+	margin: 0;
+}
+/*pseudo-elements*/
+h1::first-letter{
+	font-style: italic;
+	font-size: 1.5em;
+}
+.contain p::first-line{
+	background-color: limegreen;
+}
+p::selection{
+	color: green;
+	background-color: lightgoldenrodyellow;
+}
+/*#fruit li::before{
+	content: "✔";
+}*/
+#apple::after{
+	content: "🍎";
+}
+#orange::after{
+	content: "🍊";
+}
+#banana::after{
+	content: "🍌";
+}
+#fruit li::marker{
+	content: "✔";
+	font-size: 1.2em;
+	color: turquoise;
+}
+.pagination{
+	text-align: center;
+}
+.pagination a{
+	color: brown;
+	text-decoration: none;
+	padding: 8px 15px;
+	display: inline-block;
+}
+.pagination a.active{
+	font-weight: bold;
+	background-color: lightseagreen;
+	border-radius: 50%;
+}
+.pagination a:hover:not(.active){
+	background-color: lightgrey;
+	border-radius: 50%;
+}
+.dropdown{
+	display: inline-block;
+}
+.dropdown button{
+	background-color: #c06767;
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding: 10px 15px;
+	margin-top: 20px;
+	font-size: 1.4em;
+}
+.dropdown a{
+	padding: 10px 15px;
+	text-decoration: none;
+	color: purple;
+	display: block;
+}
+.dropdown .content{
+	display: none;
+	min-width: 100px;
+	background-color: lightskyblue;
+	position: absolute;
+	box-shadow: 2px 2px 5px black;
+}
+.dropdown:hover .content{
+	display: block;
+}
+.dropdown:hover button{
+	background-color: #801f1f;
+}
+.dropdown a:hover{
+	background-color: steelblue;
+}
+/*creating navbar*/
+.navbar ul{
+	list-style-type: none; /*removes bullet from ul*/
+	padding: 0;
+	margin: 0;
+	background-color: darkred;
+	overflow: hidden;
+}
+.navbar a{
+	color: whitesmoke;
+	text-decoration: none;
+	padding: 15px 70px;
+	display: block;	
+	text-align: center;
+}
+.navbar a:hover{
+	background-color: red;
+}
+.navbar li{
+	float: left;
+}
+aside{
+	width: 20%;
+	float: left;
+	padding: 10px;
+}
+aside li::marker{
+	content: "✔";
+	font-size: 1.2em;
+	color: darkorange;
+}	
+section{
+	width: 40%;
+	float: left;
+	padding: 10px;
+}
+article{
+	width: 40%;
+	float: left;
+	padding: 10px;
+}
+article li::marker{
+	content: "🚩";
+}
+/*media queries or responsive css...if width of device is below 600px*/
+@media screen and (max-width: 600px) {
+	aside, section, article{
+		width: 100%;
+	}
+}
+.separate{
+	height: 10px;
+	width: 900px;
+	margin: 0 auto;
+	background-color: gold;
+	display: block;
+	clear: both;
+	margin-bottom: 40px;
+}
+.gallery{
+	display: inline-block;
+	margin: 5px;
+	height: 225px;
+	border: 1px solid grey;
+}
+.gallery .description{
+	text-align: center;
+	padding: 10px;
+}
+.gallery:hover{
+	border: 2px solid red;
+}
+.gallery img{
+	height: 100%;
+	width: auto;
+}

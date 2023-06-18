@@ -4,64 +4,42 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<style>
-		div.box{
-			background-color: darkred;
-			width: 200px;
-			height: 200px;
-			float: left;
-			margin-right: 10px;
-		}
-		div.contain{
-			border: 3px solid yellow;
-			width: 1200px;
-			height: 300px;
-			margin: 20px 0 0 20px;
-			display: flow-root;
-		}
-		div.overflow{
-			height: 30px;
-			width: 300px;
-			border: 3px solid green;
-			overflow: scroll;
-			margin: 20px auto 20px;
-		}
-		div.overflow p{
-			margin: 0;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<p>this is ppractice</p>
-	<hr>
-	<p>second line</p>
-	<a href="mailto:jochieng1222@gmai.com">email me</a>
+	<h1>This is practice</h1>
+	<hr> <!--horizontal rule break-->
+
+	<!-- anchor element for email -->
+	<a href="mailto:jochieng122@gmail.com">Email me</a>
+
+	<!-- Creating a form -->
 	<form action="index.php" method="POST" enctype="multipart/form-data">
 		<!-- creating a username -->
 		<label for="Username">Username:</label>
-		<input type="text" id="Username" minlength="6" placeholder="Spongyboby" required><br>
+		<input name="Username" type="text" id="Username" minlength="6" placeholder="Spongyboby" required autocomplete="given-name"><br>
 
 		<!-- creating passwords -->
 		<label for="password">Password:</label>
-		<input type="password" id="password"><br>
+		<input name="password" type="password" id="password"><br>
 
 		<!-- creating dates -->
 		<label for="bday">Birthdate:</label>
-		<input type="date" id="bday"><br>
+		<input name="bday" type="date" id="bday"><br>
 
 		<!-- creating email -->
 		<label for="email">Email</label>
-		<input type="email" id="email" placeholder="Spongyboby@gmail.com"><br>
+		<input name="email" type="email" id="email" placeholder="Spongyboby@gmail.com" autocomplete="off"><br>
 
 		<!-- creating phone number -->
 		<label for="phone">Phone number:</label>
-		<input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9}{3}-[0-9]{4}"><br>
+		<input name="phone" type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9}{3}-[0-9]{4}" autocomplete="phone"><br>
 
 		<label for="quantity">Quantity:</label>
-		<input type="number" id="quantity" min="0" max="99"><br>
+		<input name="quantity" type="number" id="quantity" min="0" max="99"><br>
 
 		<!-- creating radio buttons -->
-		<label for="title">Title:</label>
+		<label id="title">Title:</label>
 		<label for="Mr.">Mr.</label>
 		<input type="radio" id="Mr." value="Mr." name="title">
 		<label for="Ms.">Ms.</label>
@@ -85,25 +63,126 @@
 
 		<!-- creating a checkbox -->
 		<label for="subscribe">Subscribe:</label>
-		<input type="checkbox" id="subscribe"><br>
+		<input name="subscribe" type="checkbox" id="subscribe"><br>
 
+		<!-- creating comment section -->
 		<label for="comment">Comment</label>
 		<textarea id="comment" cols="25" rows="3"></textarea><br>
 
+		<!-- creating a source file -->
 		<label for="file">File</label>
-		<input type="file" id="file" accept="image/png, image/jpeg"><br>
+		<input name="file" type="file" id="file" accept="image/png, image/jpeg"><br>
 
+		<!-- buttons to reset and submit the form -->
 		<input type="reset"><br>
 		<input type="submit">
 	</form>
+
+	<!-- floating divs -->
 	<div class="contain">
 		<div class="box"></div>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae magni aperiam accusamus, expedita in vero sunt nihil necessitatibus distinctio pariatur? Minima fugiat expedita, maiores earum consectetur ipsam ea quaerat architecto.</p>
 		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam nostrum culpa ad beatae molestiae saepe fugiat veniam animi velit dignissimos, voluptatum explicabo quaerat, molestias minus aliquid at, dolorum atque reiciendis!</p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quibusdam a amet omnis repellat iure sit ut, cupiditate adipisci blanditiis ullam tenetur harum odio, quia ipsam magnam dolorem voluptates eligendi!</p>
    </div>
+
+   <!-- creating overflow and the different types -->
    <div class="overflow">
    	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, reprehenderit ratione nemo qui sunt consectetur esse blanditiis enim illum corrupti possimus dicta at eius fuga a dolorum saepe aliquam ipsum!</p>
+   </div>
+
+   <!-- pseudo-elements -->
+   <h1>Hello</h1>
+   <p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, quis quidem repellat non laborum eius saepe, sapiente iusto eum corrupti velit deleniti error. Error, quasi dolorum natus animi, quisquam vel?</p>
+   <ul id="fruit">
+   	<li id="apple">Apple</li>
+   	<li id="orange">Orange</li>
+   	<li id="banana">Banana</li>
+   </ul>
+
+   <!-- Pagination -->
+   <h1>This is page#1</h1>
+   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum cupiditate unde illum quam cum id iste, ex perferendis, perspiciatis. Est fuga, voluptatibus rerum temporibus error inventore voluptas laudantium commodi, delectus?</p>
+   <div class="pagination">
+   	<a href=""><</a>
+   	<a href="" class="active">1</a>
+   	<a href="">2</a>
+   	<a href="">3</a>
+   	<a href="">4</a>
+   	<a href="">5</a>
+   	<a href="">></a>
+   </div>
+
+   <!-- dropdown menu -->
+   <div class="dropdown">
+   	<button>Food</button>
+   	<div class="content">
+   		<a href="">Apple</a>
+   		<a href="">Orange</a>
+   		<a href="">Banana</a>
+   	</div>
+   </div>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor blanditiis deserunt voluptates distinctio id nemo, voluptate odit sint fuga facere nobis error, nihil assumenda nulla iste, maiores magni soluta animi?</p>
+   <nav class="navbar">
+   	<ul>
+   		<li><a href="index.html">Home</a></li> <!--the hrefs are htmls which are created when necessary-->
+   		<li><a href="about.html">About</a></li>
+   		<li><a href="products.html">Products</a></li>
+   		<li><a href="contact.html">Contact</a></li>
+   	</ul>
+   </nav>
+
+   <!-- creating aside,section and article -->
+   <div>
+   	<aside>
+   		<h2>This is aside.</h2>
+   		<p>This is side content:</p>
+   		<ul>
+   			<li>Author information</li>
+   			<li>Fun facts</li>
+   			<li>Quotes</li>
+   			<li>External links</li>
+   			<li>Comments</li>
+   			<li>Related content</li>
+   		</ul>
+   	</aside>
+   	<section>
+   		<h2>This is a section.</h2>
+   		<p>This is dependent content</p>
+   		<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Magnam temporibus sequi tempore vero quo repudiandae accusamus tempora ut consequuntur omnis! Fuga fugiat tempora, dicta iusto sapiente accusamus facere minima repellendus?</p>
+   		<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Magnam temporibus sequi tempore vero quo repudiandae accusamus tempora ut consequuntur omnis! Fuga fugiat tempora, dicta iusto sapiente accusamus facere minima repellendus?</p>
+   	</section>
+   	<article>
+   		<h2>This is an article.</h2>
+   		<p>This is independent content</p>
+   		<ul>
+   			<li>News article</li>
+   			<li>Job post</li>
+   			<li>Blog post</li>
+   		</ul>
+   		<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Magnam temporibus sequi tempore vero quo repudiandae accusamus tempora ut consequuntur omnis! Fuga fugiat tempora, dicta iusto sapiente accusamus facere minima repellendus?</p>
+   	</article>
+   </div>
+   <div class="separate"></div>
+
+   <!-- CREATING IMAGE GALLERY -->
+   <div class="gallery">
+	   	<a target="_blank" href="image/amg.jpg">
+	   		<img src="image/amg.jpg" alt="Mercedes-Benz AMG" height="225px">
+	   	</a>
+   	<div class="description">Mercedes-Benz AMG</div>
+   </div>
+   <div class="gallery">
+	   	<a target="_blank" href="image/audi.jpg">
+	   		<img src="image/audi.jpg" alt="Audi RS8">
+	   	</a>
+   	<div class="description">Audi RS8</div>
+   </div>
+   <div class="gallery">
+	   	<a target="_blank" href="image/supra.jpg">
+	   		<img src="image/supra.jpg" alt="Toyota Supra">
+	   	</a>
+   	<div class="description">Toyota Supra</div>
    </div>
 </body>
 </html>
