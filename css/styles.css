@@ -257,3 +257,33 @@ article li::marker{
 	50%{transform: scale(1.5);}
 	100%{transform: scale(1);}
 }
+.wrap{
+	height: 90vh;
+	border: 5px solid black;
+	display: flex;
+	/*flex-direction: row;/*sorts how content should appear row or column or reverse of both(default is row)
+	justify-content: center; /*used for setting elements wrt main(horizontal) axis
+	align-items: start; /* sets elements wrt cross(vertical) axis */
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+.boxx{
+	width: 140px;
+	height: 150px;
+	text-align: center;
+	border-radius: 15px;
+	font-size: 5em;
+}
+.boxx1{
+	background-color: orangered;
+}
+.boxx2
+{
+	background-color: yellowgreen;
+}.boxx3
+{
+	background-color: springgreen;
+}.boxx4
+{
+	background-color: deepskyblue;
+}
