@@ -1,9 +1,18 @@
 *{
-	box-sizing: border-box;
+	box-sizing: border-box; /*the asterisk is used to select every element*/
 }
 body{
 	margin: 30px 30px 100px;
 	font-size: 1.5em;
+	background-color: lightyellow;
+}
+hr{
+	margin-bottom: 10px;
+}
+
+/*icons*/
+.ico{
+	margin-left: 17%;
 }
 i{
 	margin: 0 20px;
@@ -12,6 +21,7 @@ i{
 a#td{
 	text-decoration: none;
 	text-align: center;
+	margin: 0 auto;
 }
 #home{
 	color: darkolivegreen;
@@ -39,11 +49,14 @@ a#td{
 	color: #8d008d;
 	opacity: 0.5;
 }
+
 h1{
 	font-family: Algerian,serif;
 	font-weight: 100;
 	text-shadow: 5px 5px 5px indianred, 10px 10px 3px steelblue;
 }
+
+/*floating divs*/
 div.box{
 	background-color: darkred;
 	width: 200px;
@@ -58,6 +71,8 @@ div.contain{
 	margin: 20px 0 0 20px;
 	display: flow-root; /*allows for elements that are floating to stay inside the div*/
 }
+
+/*overflowing content in div*/
 div.overflow{
 	height: 70px;
 	width: 300px;
@@ -68,6 +83,7 @@ div.overflow{
 div.overflow p{
 	margin: 0;
 }
+
 /*pseudo-elements*/
 h1::first-letter{
 	font-style: italic;
@@ -97,6 +113,8 @@ p::selection{
 	font-size: 1.2em;
 	color: turquoise;
 }
+
+/*pagination*/
 .pagination{
 	text-align: center;
 }
@@ -115,6 +133,8 @@ p::selection{
 	background-color: lightgrey;
 	border-radius: 50%;
 }
+
+/*dropdown menu*/
 .dropdown{
 	display: inline-block;
 }
@@ -149,6 +169,7 @@ p::selection{
 .dropdown a:hover{
 	background-color: steelblue;
 }
+
 /*creating navbar*/
 .navbar ul{
 	list-style-type: none; /*removes bullet from ul*/
@@ -170,6 +191,8 @@ p::selection{
 .navbar li{
 	float: left;
 }
+
+/*aside,section and article*/
 aside{
 	width: 20%;
 	float: left;
@@ -199,6 +222,8 @@ article li::marker{
 		width: 100%;
 	}
 }
+
+/*separator*/
 .separate{
 	height: 10px;
 	width: 900px;
@@ -208,6 +233,8 @@ article li::marker{
 	clear: both;
 	margin-bottom: 40px;
 }
+
+/*image gallery*/
 .gallery{
 	display: inline-block;
 	margin: 5px;
@@ -233,11 +260,9 @@ article li::marker{
 	justify-content: center;
 	align-items: center;
 	height: 45vh;
-	background-color: powderblue;
 	margin-top: 30px;
 	width: 500px;
 	margin-left: 25%;
-	border-radius: 100px;
 }
 #ball{
 	width: 150px;
@@ -257,15 +282,20 @@ article li::marker{
 	50%{transform: scale(1.5);}
 	100%{transform: scale(1);}
 }
+
+/*flexbox*/
 .wrap{
 	height: 90vh;
+	width: 700px;
+	margin-left: 320px;
 	border: 5px solid black;
 	display: flex;
-	/*flex-direction: row;/*sorts how content should appear row or column or reverse of both(default is row)
-	justify-content: center; /*used for setting elements wrt main(horizontal) axis
+	/*flex-direction: row;/*sorts how content should appear row or column or reverse of both(default is row)*/
+	justify-content:space-around; /*used for setting elements wrt main(horizontal) axis*/
 	align-items: start; /* sets elements wrt cross(vertical) axis */
 	align-content: flex-start;
 	flex-wrap: wrap;
+	margin-top: 20px;
 }
 .boxx{
 	width: 140px;
@@ -273,6 +303,7 @@ article li::marker{
 	text-align: center;
 	border-radius: 15px;
 	font-size: 5em;
+	margin: 2px;
 }
 .boxx1{
 	background-color: orangered;
@@ -286,4 +317,28 @@ article li::marker{
 }.boxx4
 {
 	background-color: deepskyblue;
+}
+
+/*transform*/
+.square{
+	width: 250px;
+	height: 250px;
+	font-size: 8em;
+	border: 2px solid turquoise;
+	margin-top: 30px;
+	text-align: center;
+	box-shadow: 5px 5px 10px 10px powderblue;
+	transform: scale(0.5);
+}
+#sq1{
+	background-color: lawngreen;
+	transform: translate(500px, -60px) rotateZ(45deg) scale(0.7);
+}
+#sq2{
+	background-color: #f27da4;
+	transform: translate(200px, -190px) rotateZ(-30deg) scale(0.9);
+}
+#sq3{
+	background-color: #f2f250;
+	transform: translate(563px, -234px) rotateX(180deg) rotateZ(-9deg);
 }
