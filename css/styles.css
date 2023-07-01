@@ -4,7 +4,7 @@
 body{
 	margin: 30px 30px 100px;
 	font-size: 1.5em;
-	background-color: lightyellow;
+	background-color: #1655ba3d;
 }
 hr{
 	margin-bottom: 10px;
@@ -341,4 +341,17 @@ article li::marker{
 #sq3{
 	background-color: #f2f250;
 	transform: translate(563px, -234px) rotateX(180deg) rotateZ(-9deg);
+}
+.shrek{
+	width: 500px;
+    margin-top: 30px;
+    animation-name: slideLeft;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /*animation-play-state: runnning; useful with programming lang. such as JS as we can this on and off */
+    animation-timing-function: jump-both;
+}
+@keyframes slideLeft{
+	to{transform: translateX(53vw);}
 }
